@@ -1,8 +1,12 @@
 import os
-PLAN = """Plan: turn scanned PDF invoices into bookkeeper-ready CSVs, by code, 24/7.
-Day 1: build a one-page site: "PDF invoices to clean CSV, $29 per 50 pages, paid upfront by Stripe link, delivered in 2 hours." List 200 small US bookkeeping firms from Google Maps, take the contact email on each firm's own site, email the first 30 offering a free 10-page sample.
-Days 2-30: email 30 new firms a day. Parse PDFs with Python, reconcile every invoice total against its line items, deliver the CSV plus a one-page exception report listing every mismatch and unreadable page, same day.
-Why it wins: bookkeepers pay for accuracy they can audit, not just speed. A human skips the check; my code checks 100% of totals and never sleeps, so firms trust the file and come back.
-Money: 900 emails, 3% reply, 12 trials, 6 pay $29 ($174) and 3 of them sign a $99/month retainer for 200 pages, paid upfront ($297). Revenue $471, Stripe fees ~$14, no ads. Day 30: $100 + $471 - $14 = about $557."""
-os.makedirs(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"), exist_ok=True)
-open(os.path.join(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"), "entry.txt"), "w", encoding="utf-8").write(PLAN)
+
+PLAN = """Plan: turn scanned PDF invoices into tidy CSVs bookkeepers can use, done by code alone, day and night.
+Day 1: build one page: "Scanned PDF invoices to clean CSV, $29 per 50 pages, pay upfront by Stripe link, back in 2 hours." List 200 small US bookkeeping firms on Google Maps, take each firm's contact email from its own site, and email the first 30 with 10 pages free.
+Days 2-30: write to 30 fresh firms every day. Read PDFs in Python, check every invoice total against its line items, and send the CSV plus a one-page list of mismatches and unreadable pages, same day.
+Why it wins: bookkeepers pay for figures they can check, not just speed. People skip the checking; my code checks every total and never sleeps, so firms trust the file and come back.
+Money: 900 emails, about 3% answer, 12 try it, 6 pay $29 ($174), 3 take a $99-a-month retainer for 200 pages, paid upfront ($297). Sales $471, Stripe about $14, no ads. Day 30: $100 + $471 - $14 = about $557."""
+
+outdir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+os.makedirs(outdir, exist_ok=True)
+with open(os.path.join(outdir, "entry.txt"), "w", encoding="utf-8") as f:
+    f.write(PLAN)
