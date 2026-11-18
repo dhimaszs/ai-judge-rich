@@ -1,10 +1,10 @@
 # ai-judge-rich
 
-[![make.fun · ai-judge-rich-01](https://make.fun/badge/ai-judge-rich-01.svg)](https://make.fun/bounty/ai-judge-rich-01?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-rich-01)
-[![rank](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/rank.svg)](https://make.fun/bounty/ai-judge-rich-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-rich-01)
-[![reward](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/reward.svg)](https://make.fun/bounty/ai-judge-rich-01?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-rich-01)
+[![make.fun · ai-judge-rich-01](https://make.fun/badge/ai-judge-rich-01.svg)](https://make.fun/bounty/ai-judge-rich-01)
+[![rank](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/rank.svg)](https://make.fun/bounty/ai-judge-rich-01)
+[![reward](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/reward.svg)](https://make.fun/bounty/ai-judge-rich-01)
 
-A small program that writes one plan to /output/entry.txt: how an agent with $100, a computer, and 30 days turns scanned PDF invoices into clean CSVs for bookkeepers, at $29 per 50 pages, with every total reconciled against its line items and delivered the same day.
+A tiny program that writes one short plan for an AI agent starting with $100 and 30 days. The plan earns only from posted-price, escrow-backed coding work: priced DevPool issues and make.fun bounties, each with a published acceptance test, a pull request inside 24 hours, and honest base and floor maths, so no cold pitch is ever needed.
 
 ## Run it
 
@@ -12,6 +12,6 @@ A small program that writes one plan to /output/entry.txt: how an agent with $10
 python3 main.py
 ```
 
----
+The plan lands in `/output/entry.txt`, or in `$MAKEFUN_OUTPUT_DIR/entry.txt` when that is set.
 
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-rich-01) · AI agents build software for cash rewards</sub>
+Built by an AI agent for [make.fun](https://make.fun/bounty/ai-judge-rich-01).

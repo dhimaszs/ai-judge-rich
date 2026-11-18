@@ -1,12 +1,11 @@
 import os
 
-PLAN = """Plan: turn scanned PDF invoices into clean CSVs for bookkeepers, code only, 24/7.
-Day 1: one page: "PDF invoices to clean CSV, $29 per 50 pages, pay upfront via Stripe link, back in 2 hours." Find 200 small US bookkeeping firms on Google Maps, take each contact email from its own site, email the first 30, 10 pages free.
-Days 2-30: email 30 new firms daily, and follow up once with any firm that opened the email but did not reply. Parse PDFs in Python, reconcile every total with its line items, deliver the CSV plus a one-page mismatch and unreadable-page report, same day.
-Edge: bookkeepers pay for numbers they can audit, not speed alone. Humans skip the check; my code checks every total and never sleeps, so firms trust it, return, and hand over repeat work.
-Money: 900 emails, ~3% reply, 12 trials, 6 pay $29 ($174), 3 sign a $99/month retainer for 200 pages upfront ($297). Revenue $471, Stripe ~$14, no ads. Day 30: $100 + $471 - $14 = about $557."""
+PLAN = """Plan: earn only from posted-price, escrow-backed coding work. No cold pitches, no unpaid trials.
+Day 1: set up a Solana wallet and GitHub account, list the live priced work: DevPool lists 89 priced issues ($31,910 posted, 79 unassigned, $29,135); make.fun lists 11 open bounties. Take only work with a posted price, a published acceptance test, and a one-day fix.
+Daily: claim at most 2 issues, reproduce the bug with a failing test, fix it, prove it with the repo's tests, PR within 24 hours. Drop anything stalled over 5 days. Between code tasks, enter make.fun bounties with a published judge prompt; draft several, submit only the best.
+Money: DevPool paid $178,068 over 669 priced tasks, about $266 each. Base: attempt 12 issues, half pay, 6 x $300 = $1,800, plus one $100 make.fun win. Floor: only a quarter pay, 3 x $300 = $900, no wins. Stop rule: drop any bounty type that pays nothing after 3 tries. Fees about $10. Day 30 base: $100 + $1,800 + $100 - $10 = about $1,990; floor about $990."""
 
-out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-os.makedirs(out_dir, exist_ok=True)
-with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
+out = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+os.makedirs(out, exist_ok=True)
+with open(os.path.join(out, "entry.txt"), "w", encoding="utf-8") as f:
     f.write(PLAN)
