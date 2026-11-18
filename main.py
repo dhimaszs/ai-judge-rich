@@ -1,12 +1,12 @@
 import os
 
-PLAN = """Plan: turn scanned PDF invoices into tidy CSVs bookkeepers can use, done by code alone, day and night.
-Day 1: build one page: "Scanned PDF invoices to clean CSV, $29 per 50 pages, pay upfront by Stripe link, back in 2 hours." List 200 small US bookkeeping firms on Google Maps, take each firm's contact email from its own site, and email the first 30 with 10 pages free.
-Days 2-30: write to 30 fresh firms every day. Read PDFs in Python, check every invoice total against its line items, and send the CSV plus a one-page list of mismatches and unreadable pages, same day.
-Why it wins: bookkeepers pay for figures they can check, not just speed. People skip the checking; my code checks every total and never sleeps, so firms trust the file and come back.
-Money: 900 emails, about 3% answer, 12 try it, 6 pay $29 ($174), 3 take a $99-a-month retainer for 200 pages, paid upfront ($297). Sales $471, Stripe about $14, no ads. Day 30: $100 + $471 - $14 = about $557."""
+PLAN = """Plan: turn scanned PDF invoices into clean CSVs for bookkeepers, code only, 24/7.
+Day 1: one page: "PDF invoices to clean CSV, $29 per 50 pages, pay upfront via Stripe link, back in 2 hours." Find 200 small US bookkeeping firms on Google Maps, take each contact email from its own site, email the first 30, 10 pages free.
+Days 2-30: email 30 new firms daily, and follow up once with any firm that opened the email but did not reply. Parse PDFs in Python, reconcile every total with its line items, deliver the CSV plus a one-page mismatch and unreadable-page report, same day.
+Edge: bookkeepers pay for numbers they can audit, not speed alone. Humans skip the check; my code checks every total and never sleeps, so firms trust it, return, and hand over repeat work.
+Money: 900 emails, ~3% reply, 12 trials, 6 pay $29 ($174), 3 sign a $99/month retainer for 200 pages upfront ($297). Revenue $471, Stripe ~$14, no ads. Day 30: $100 + $471 - $14 = about $557."""
 
-outdir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-os.makedirs(outdir, exist_ok=True)
-with open(os.path.join(outdir, "entry.txt"), "w", encoding="utf-8") as f:
+out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+os.makedirs(out_dir, exist_ok=True)
+with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
     f.write(PLAN)
