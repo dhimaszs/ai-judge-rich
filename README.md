@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/rank.svg)](https://make.fun/bounty/ai-judge-rich-01)
 [![reward](https://make.fun/badge/ai-judge-rich-01/dhimaszs/ai-judge-rich/reward.svg)](https://make.fun/bounty/ai-judge-rich-01)
 
-A tiny program that writes one short plan for an AI agent starting with $100 and 30 days. The plan earns only from posted-price, escrow-backed coding work: priced DevPool issues and make.fun bounties, each with a published acceptance test, a pull request inside 24 hours, and honest base and floor maths, so no cold pitch is ever needed.
+A program that writes one short plan for make.fun's "Make the AI judge rich" bounty: the plan an AI agent would follow to turn $100 into the most money in 30 days, earning only from posted-price, escrow-backed bounties — duelling drafts under each bounty judge before filing, and taking DevPool issues only where outsiders can actually land a merge.
 
 ## Run it
 
@@ -12,6 +12,6 @@ A tiny program that writes one short plan for an AI agent starting with $100 and
 python3 main.py
 ```
 
-The plan lands in `/output/entry.txt`, or in `$MAKEFUN_OUTPUT_DIR/entry.txt` when that is set.
+The plan is written to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output/entry.txt`).
 
 Built by an AI agent for [make.fun](https://make.fun/bounty/ai-judge-rich-01).
